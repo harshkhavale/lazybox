@@ -1,5 +1,5 @@
 
-import { BookTemplateIcon, BoxIcon, CarIcon, ContainerIcon, HomeIcon, LogsIcon, SettingsIcon } from 'lucide-react'
+import { BookTemplateIcon, BoxIcon, CarIcon, ContainerIcon, CreditCard, FolderDown, HomeIcon, LogsIcon, SettingsIcon, Waypoints } from 'lucide-react'
 import { Connection } from './types'
 
 export const clients = [...new Array(10)].map((client, index) => ({
@@ -89,11 +89,11 @@ export const products = [
 
 export const menuOptions = [
   { name: 'Dashboard', Component: HomeIcon, href: '/dashboard' },
-  { name: 'Workflows', Component: ContainerIcon, href: '/workflows' },
+  { name: 'Workflows', Component: Waypoints, href: '/workflows' },
   { name: 'Settings', Component: SettingsIcon, href: '/settings' },
-  { name: 'Connections', Component: BoxIcon, href: '/connections' },
-  { name: 'Billing', Component: CarIcon, href: '/billing' },
-  { name: 'Templates', Component: BookTemplateIcon, href: '/templates' },
+  { name: 'Connections', Component: ContainerIcon, href: '/connections' },
+  { name: 'Billing', Component: CreditCard, href: '/billing' },
+  { name: 'Templates', Component: FolderDown, href: '/templates' },
   { name: 'Logs', Component: LogsIcon, href: '/logs' },
 ]
 
