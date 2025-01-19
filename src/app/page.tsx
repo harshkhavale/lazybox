@@ -23,13 +23,13 @@ export default function Home() {
       <section className="h-screen w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
      
         <div className="absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
-        <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
+        <div className="flex flex-col mt-[-80px]  md:mt-[-10px]">
         <Image
                             src="/sloth-inv.png"
                             width={2000}
                             height={2000}
                             alt="fuzzie logo"
-                            className="shadow-sm absolute object-cover z-0 rotate-45 left-20 "
+                            className="shadow-sm absolute object-cover z-0 rotate-45 md:-top-80 left-20 "
                           />
           <ContainerScroll
             titleComponent={
@@ -42,8 +42,8 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <div className={`text-8xl md:text-9xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 ${happyFont.className}`}>
-                  Automate Your Work With <span className=" text-green-400">
+                <div className={`text-7xl md:text-9xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 `}>
+                  Automate Your Work With <span className={`${happyFont.className} text-green-400`}>
                           Lazybox
                         </span>
                 </div>
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
       <section className="mt-[-500px]">
         <LampComponent />
-        <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+        <div className="flex pb-40 flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
           <CardContainer className="inter-var ">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full md:!w-[350px] h-auto rounded-xl p-6 border">
               <CardItem
