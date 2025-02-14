@@ -42,8 +42,8 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <div className={`text-7xl md:text-9xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 `}>
-                  Automate Your Work With <span className={`${happyFont.className} text-green-400`}>
+                <div className={`text-7xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 `}>
+                  Automate Your Work With <span className={` text-white text-[16rem] -mt-20`}>
                           Lazybox
                         </span>
                 </div>

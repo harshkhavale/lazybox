@@ -13,6 +13,7 @@ import clsx from "clsx";
 import { Separator } from "../ui/separator";
 import { Database, GitBranch, LucideMousePointerClick } from "lucide-react";
 import { ModeToggle } from "../global/mode-toggle";
+import Image from "next/image";
 
 type Props = {};
 
@@ -22,7 +23,13 @@ const MenuOptions = (props: Props) => {
     <nav className=" dark:bg-black h-screen overflow-scroll justify-between flex items-center flex-col gap-10 py-6 px-2">
       <div className="flex items-center justify-center flex-col gap-8">
         <Link className=" flex font-bold flex-col" href={"/"}>
-          lazybox
+          <Image
+            src="/logo.png"
+            width={30}
+            height={30}
+            alt="app-logo"
+            className="shadow-sm"
+          />
         </Link>
         <TooltipProvider>
           {menuOptions.map((menuItem) => (
@@ -35,7 +42,7 @@ const MenuOptions = (props: Props) => {
                       className={clsx(
                         `group h-8 w-8 flex items-center justify-center scale-[1.5] rounded-lg p-[3px] cursor-pointer`,
                         {
-                          "dark:bg-[#37aa28] bg-[#e0ffe7]":
+                          "dark:bg-[#37aa28] bg-[#baffc5]":
                             pathName === menuItem.href,
                         }
                       )}
@@ -76,7 +83,7 @@ const MenuOptions = (props: Props) => {
         </div>
       </div>
       <div className=" flex items-center justify-center flex-col gap-8">
-        <ModeToggle/>
+        <ModeToggle />
       </div>
     </nav>
   );
