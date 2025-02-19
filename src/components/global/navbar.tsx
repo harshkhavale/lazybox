@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { MenuIcon } from 'lucide-react'
 import { Happy_Monkey } from 'next/font/google'
+import { UserButton } from '@clerk/nextjs'
 // import { UserButton, currentUser } from '@clerk/nextjs'
 const happyFont = Happy_Monkey({
   subsets: ['latin'],
@@ -58,7 +59,7 @@ const Navbar = async (props: Props) => {
             {true ? 'Dashboard' : 'Get Started'}
           </span>
         </Link>
-        {/* {user ? <UserButton afterSignOutUrl="/" /> : null} */}
+        <UserButton afterSignOutUrl="/" />
         <MenuIcon className="md:hidden" />
       </aside>
     </header>

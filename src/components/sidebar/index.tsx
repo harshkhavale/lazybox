@@ -40,7 +40,7 @@ const MenuOptions = (props: Props) => {
                     <Link
                       href={menuItem.href}
                       className={clsx(
-                        `group h-8 w-8 flex items-center justify-center scale-[1.5] rounded-lg p-[3px] cursor-pointer`,
+                        `group h-8 w-8 flex items-center justify-center hover:scale-[1.5] scale-[1.25] rounded-lg p-[3px] cursor-pointer`,
                         {
                           "dark:bg-[#37aa28] bg-[#baffc5]":
                             pathName === menuItem.href,
