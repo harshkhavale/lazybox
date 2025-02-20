@@ -1,48 +1,18 @@
-'use client'
-import React, { useEffect, useRef } from 'react'
-import * as LR from '@uploadcare/blocks'
-import { useRouter } from 'next/navigation'
+'use client' // is needed only if you’re using React Server Components
+import { FileUploaderRegular } from '@uploadcare/react-uploader/next';
+import '@uploadcare/react-uploader/core.css';
 
-type Props = {
-  onUpload: (e: string) => any
-}
-
-LR.registerBlocks(LR)
-
-const UploadCareButton = ({ onUpload }: Props) => {
-  const router = useRouter()
-  const ctxProviderRef = useRef<
-    typeof LR.UploadCtxProvider.prototype & LR.UploadCtxProvider
-  >(null)
-
-  useEffect(() => {
-    const handleUpload = async (e: any) => {
-      const file = await onUpload(e.detail.cdnUrl)
-      if (file) {
-        router.refresh()
-      }
-    }
-    ctxProviderRef.current.addEventListener('file-upload-success', handleUpload)
-  }, [])
-
+export const UploadCareButton=()=> {
   return (
     <div>
-      <lr-config
-        ctx-name="my-uploader"
-        pubkey="a9428ff5ff90ae7a64eb"
-      />
-
-      <lr-file-uploader-regular
-        ctx-name="my-uploader"
-        css-src={`https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.35.2/web/lr-file-uploader-regular.min.css`}
-      />
-
-      <lr-upload-ctx-provider
-        ctx-name="my-uploader"
-        ref={ctxProviderRef}
+      <FileUploaderRegular
+         sourceList="local, camera, facebook, gdrive"
+         cameraModes="photo, video"
+         classNameUploader="uc-dark"
+         pubkey="e1f97deb8eead9945548"
       />
     </div>
-  )
+  );
 }
 
-export default UploadCareButton
+export default UploadCareButton;
