@@ -7,9 +7,9 @@ import Navbar from '@/components/global/navbar'
 import { Button } from '@/components/ui/button'
 import { clients, products } from '@/lib/constant'
 import { CheckIcon } from 'lucide-react'
-import { Happy_Monkey } from 'next/font/google'
+import { Happy_Monkey, Monoton } from 'next/font/google'
 import Image from 'next/image'
-const happyFont = Happy_Monkey({
+const happyFont = Monoton({
   subsets: ['latin'],
   weight: '400'
 })
@@ -42,9 +42,9 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <div className={`text-7xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 `}>
-                  Automate Your Work With <span className={` text-white text-[16rem] -mt-20`}>
-                          Lazybox
+                <div className={`text-7xl md:text-7xl pt-10  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 `}>
+                  Automate Your Work With <span className={` text-white text-[16rem] ${happyFont.className} -mt-20`}>
+                          autoflow
                         </span>
                 </div>
               </div>
